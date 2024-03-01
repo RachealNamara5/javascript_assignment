@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Max of Three Numbers</title>
+  <link rel="stylesheet" href="./styles/input.css">
+</head>
+<body>
+   
+
+
+<script>
+  function findMaxOfThreeNumbers() {
+    // Prompt for 3 inputs
+    let input1 = prompt("Enter the first number:");
+    let input2 = prompt("Enter the second number:");
+    let input3 = prompt("Enter the third number:");
+
+    // Convert inputs to numbers
+    let number1 = parseFloat(input1);
+    let number2 = parseFloat(input2);
+    let number3 = parseFloat(input3);
+
+    // Check if inputs are valid numbers
+    if (isNaN(number1) || isNaN(number2) || isNaN(number3)) {
+      return "Invalid input. Please enter valid numbers.";
+    }
+
+    // Use Math.max to get the maximum
+    let maximum = Math.max(number1, number2, number3);
+
+    return "The maximum of the three numbers is: " + maximum;
+  }
+
+  // Call the function and display the result
+  alert(findMaxOfThreeNumbers());
+</script>
+
+</body>
+</html>
